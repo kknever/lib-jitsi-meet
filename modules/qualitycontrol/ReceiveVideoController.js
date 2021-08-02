@@ -5,7 +5,7 @@ import * as JitsiConferenceEvents from '../../JitsiConferenceEvents';
 
 const logger = getLogger(__filename);
 const MAX_HEIGHT_ONSTAGE = 2160;
-const MAX_HEIGHT_THUMBNAIL = 180;
+const MAX_HEIGHT_THUMBNAIL = 720;
 const LASTN_UNLIMITED = -1;
 
 /**
