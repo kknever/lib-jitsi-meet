@@ -28,12 +28,13 @@ import { SIM_LAYER_RIDS, TPCUtils } from './TPCUtils';
 // FIXME SDP tools should end up in some kind of util module
 
 const logger = getLogger(__filename);
-const DEGRADATION_PREFERENCE_CAMERA = 'maintain-framerate';
+//const DEGRADATION_PREFERENCE_CAMERA = 'maintain-framerate';
+const DEGRADATION_PREFERENCE_CAMERA = 'maintain-resolution';
 const DEGRADATION_PREFERENCE_DESKTOP = 'maintain-resolution';
 const DESKTOP_SHARE_RATE = 500000;
-const HD_BITRATE = 2500000;
-const LD_BITRATE = 200000;
-const SD_BITRATE = 700000;
+const HD_BITRATE = 5000000;
+const LD_BITRATE = 400000;
+const SD_BITRATE = 1400000;
 
 /* eslint-disable max-params */
 
