@@ -48,12 +48,12 @@ const DEFAULT_CONSTRAINTS = {
         height: {
             ideal: 720,
             max: 720,
-            min: 180
+            min: 720
         },
         width: {
             ideal: 1280,
             max: 1280,
-            min: 320
+            min: 1280
         }
     }
 };
