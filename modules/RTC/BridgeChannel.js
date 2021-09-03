@@ -238,11 +238,18 @@ export default class BridgeChannel {
      * @param {Number} maxFrameHeightPixels the maximum frame height,
      * in pixels, this receiver is willing to receive
      */
+//     sendReceiverVideoConstraintMessage(maxFrameHeightPixels) {
+//         logger.log(`Sending ReceiverVideoConstraint with maxFrameHeight=${maxFrameHeightPixels}px`);
+//         this._send({
+//             colibriClass: 'ReceiverVideoConstraint',
+//             maxFrameHeight: maxFrameHeightPixels
+//         });
+//     }
     sendReceiverVideoConstraintMessage(maxFrameHeightPixels) {
         logger.log(`Sending ReceiverVideoConstraint with maxFrameHeight=${maxFrameHeightPixels}px`);
         this._send({
             colibriClass: 'ReceiverVideoConstraint',
-            maxFrameHeight: maxFrameHeightPixels
+            maxFrameHeight: 1080
         });
     }
 
