@@ -127,7 +127,7 @@ describe('SendVideoController', () => {
     });
     describe('handles 0 as receiver/sender video constraint', () => {
         it('0 if it\'s the active sessions\'s remote recv constraint', () => {
-            jvbConnection.setRemoteRecvMaxFrameHeight(0);
+            jvbConnection.setRemoteRecvMaxFrameHeight(720);
             p2pConnection.setRemoteRecvMaxFrameHeight(720);
 
             conference.setActiveMediaSession(jvbConnection);
@@ -136,7 +136,7 @@ describe('SendVideoController', () => {
             expect(p2pConnection.senderVideoConstraint).toBe(0);
         });
         it('720 if 0 is set on the non-active session', () => {
-            jvbConnection.setRemoteRecvMaxFrameHeight(0);
+            jvbConnection.setRemoteRecvMaxFrameHeight(720);
             p2pConnection.setRemoteRecvMaxFrameHeight(720);
 
             conference.setActiveMediaSession(p2pConnection);
