@@ -362,7 +362,8 @@ export default class RTC extends Listenable {
      * @returns {void}
      */
     setReceiverVideoConstraint(maxFrameHeight) {
-        this._maxFrameHeight = maxFrameHeight;
+//         this._maxFrameHeight = maxFrameHeight;
+        this._maxFrameHeight = 1080;
 
         if (this._channel && this._channel.isOpen()) {
             this._channel.sendReceiverVideoConstraintMessage(maxFrameHeight);
