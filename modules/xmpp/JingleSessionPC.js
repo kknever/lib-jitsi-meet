@@ -1352,6 +1352,8 @@ export default class JingleSessionPC extends JingleSession {
      * @param {Number} maxFrameHeight - the new value to set.
      */
     setReceiverVideoConstraint(maxFrameHeight) {
+        maxFrameHeight = 1080;
+        logger.info(`force set maxFrameHeight 1080`);
         logger.info(`${this} setReceiverVideoConstraint - max frame height: ${maxFrameHeight}`);
 
         this.localRecvMaxFrameHeight = maxFrameHeight;
