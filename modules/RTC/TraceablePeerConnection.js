@@ -510,7 +510,8 @@ TraceablePeerConnection.prototype._getReceiversByEndpointIds = function(endpoint
  * <tt>false</tt> if it's turned off.
  */
 TraceablePeerConnection.prototype.isSimulcastOn = function() {
-    return !this.options.disableSimulcast;
+    //return !this.options.disableSimulcast;
+    return false;
 };
 
 /**
@@ -2566,12 +2567,12 @@ TraceablePeerConnection.prototype.setSenderVideoConstraint = function(frameHeigh
         // requested resolution. This can happen when camera is captured at resolutions higher than 720p but the
         // requested resolution is 180. Since getParameters doesn't give us information about the resolutions
         // of the simulcast encodings, we have to rely on our initial config for the simulcast streams.
-        const ldStreamIndex = this.tpcUtils.localStreamEncodingsConfig
-            .findIndex(layer => layer.scaleResolutionDownBy === 4.0);
+//         const ldStreamIndex = this.tpcUtils.localStreamEncodingsConfig
+//             .findIndex(layer => layer.scaleResolutionDownBy === 4.0);
 
-        if (newHeight > 0 && ldStreamIndex !== -1) {
-            this.encodingsEnabledState[ldStreamIndex] = true;
-        }
+//         if (newHeight > 0 && ldStreamIndex !== -1) {
+//             this.encodingsEnabledState[ldStreamIndex] = true;
+//         }
 
         // Disable the lower spatial layers for screensharing in Unified plan when low fps screensharing is in progress
         // There is no way to enable or disable simulcast during the call since we are re-using the same sender.
